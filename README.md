@@ -1,1 +1,1 @@
-Repositório para postar as coisas necessarias para o curso de AED 1.
+Repositório de atividades do curso de AED 1.
