@@ -1,0 +1,44 @@
+
+// Pedro Esqueda Pellegrina RA:163964
+//AED1 EP12: Array Hash
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+int calcularHash(char string[], int posicao) {
+    int i, j, hash = 0;
+    int tamanho = strlen(string);
+    
+    for (i = 0; i < tamanho; i++) {
+        
+        hash += (string[i] - 65)  + i + posicao;
+    }
+    
+    return hash;
+}
+
+int main() {
+    int casosTeste, linhas, i, j;
+    char string[51];
+    
+    scanf("%d", &casosTeste);
+    
+    while (casosTeste > 0) {
+        scanf("%d", &linhas);
+        
+        int hashTotal = 0;
+        
+        for (i = 0; i < linhas; i++) {
+            scanf("%s", string);
+            hashTotal += calcularHash(string, i);
+        }
+        
+        printf("%d\n", hashTotal);
+        
+        casosTeste--;
+    }
+    
+    return 0;
+}
